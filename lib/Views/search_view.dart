@@ -12,7 +12,7 @@ class SearchView extends StatelessWidget {
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           child: Text(
-            text,
+            text.trim(),
             textAlign: TextAlign.right,
             style: const TextStyle(
                 color: Color.fromARGB(255, 144, 130, 3),
@@ -32,7 +32,7 @@ class SearchView extends StatelessWidget {
                 physics: const BouncingScrollPhysics(),
                 slivers: [
                   NewsListViewBuilderForSearchView(
-                    text: text,
+                    text: text.trim(),
                   )
                 ],
               ),
